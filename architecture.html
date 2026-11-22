@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>14-Portal Federated System Architecture | Arithmo-Edge</title>
+    <meta
+      name="description"
+      content="Explore the 14-portal Arithmo-Edge federation uniting Arithmo-Core-SDK, Dual-Storage Data Lake, Edge Read-Shield cache, and client BigInt Miller-Rabin engine."
+    />
+    <link
+      rel="canonical"
+      href="https://rayaantasnim.github.io/Arithmo-Edge/architecture.html"
+    />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="author" content="Rayaan Tasnim, Jalees Habib" />
+    <meta name="theme-color" content="#0A0F1C" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Arithmo-Edge" />
+    <meta
+      property="og:title"
+      content="14-Portal Federated System Architecture | Arithmo-Edge"
+    />
+    <meta
+      property="og:description"
+      content="Explore the 14-portal Arithmo-Edge network, Arithmo-Core-SDK, Dual-Storage Lake, Read-Shield cache, and live browser BigInt math engine."
+    />
+    <meta
+      property="og:url"
+      content="https://rayaantasnim.github.io/Arithmo-Edge/architecture.html"
+    />
+    <meta
+      property="og:image"
+      content="https://images.pexels.com/photos/4498363/pexels-photo-4498363.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Federated 14-portal GitHub Pages architecture and Arithmo-Core-SDK topology diagram"
+    />
+    <meta property="og:locale" content="en_US" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="14-Portal Federated System Architecture | Arithmo-Edge"
+    />
+    <meta
+      name="twitter:description"
+      content="Explore the 14-portal Arithmo-Edge network, Arithmo-Core-SDK, Dual-Storage Lake, Read-Shield cache, and live browser BigInt math engine."
+    />
+    <meta
+      name="twitter:image"
+      content="https://images.pexels.com/photos/4497210/pexels-photo-4497210.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Federated 14-portal GitHub Pages architecture and Arithmo-Core-SDK topology diagram"
+    />
+
+    <link rel="icon" type="image/jpeg" href="favicon.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://rayaantasnim.github.io/Arithmo-Edge/#organization",
+            "name": "Arithmo-Edge",
+            "alternateName": "Olympiad Edge",
+            "url": "https://rayaantasnim.github.io/Arithmo-Edge/",
+            "logo": "https://rayaantasnim.github.io/Arithmo-Edge/favicon.jpg",
+            "email": "rayaantasnim@gmail.com",
+            "areaServed": "Worldwide",
+            "founder": [
+              {
+                "@type": "Person",
+                "@id": "https://rayaantasnim.github.io/Arithmo-Edge/pioneers.html#rayaan-tasnim",
+                "name": "Rayaan Tasnim",
+                "jobTitle": "Founder & Chief System Architect",
+                "email": "rayaantasnim@gmail.com",
+                "sameAs": [
+                  "https://github.com",
+                  "https://github.com/Arithmo-Edge"
+                ]
+              },
+              {
+                "@type": "Person",
+                "@id": "https://rayaantasnim.github.io/Arithmo-Edge/pioneers.html#jalees-habib",
+                "name": "Jalees Habib",
+                "jobTitle": "Co-Founder & Chief Mathematical Engineer",
+                "sameAs": [
+                  "https://www.youtube.com/@jaleeshabib",
+                  "https://www.chess.com/member/jaiees"
+                ]
+              }
+            ],
+            "sameAs": [
+              "https://github.com",
+              "https://github.com/Arithmo-Edge",
+              "https://www.youtube.com/@jaleeshabib",
+              "https://www.chess.com/member/jaiees",
+              "https://rayaantasnim.github.io/Arithmo-Edge/pioneers.html"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://rayaantasnim.github.io/Arithmo-Edge/#website",
+            "url": "https://rayaantasnim.github.io/Arithmo-Edge/",
+            "name": "Arithmo-Edge",
+            "alternateName": "Olympiad Edge",
+            "description": "The World's First Real-Time ELO-Rated Competitive Mathematics & Olympiad Mega-Ecosystem, Powered by Olympiad Edge.",
+            "inLanguage": "en-US",
+            "publisher": {
+              "@id": "https://rayaantasnim.github.io/Arithmo-Edge/#organization"
+            },
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://rayaantasnim.github.io/Arithmo-Edge/?q={search_term_string}"
+              },
+              "query-input": "required name=search_term_string"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://rayaantasnim.github.io/Arithmo-Edge/architecture.html#webpage",
+            "url": "https://rayaantasnim.github.io/Arithmo-Edge/architecture.html",
+            "name": "14-Portal Federated System Architecture | Arithmo-Edge",
+            "description": "Explore the 14-portal Arithmo-Edge federation uniting Arithmo-Core-SDK, Dual-Storage Data Lake, Edge Read-Shield cache, and client BigInt Miller-Rabin engine.",
+            "inLanguage": "en-US",
+            "isPartOf": {
+              "@id": "https://rayaantasnim.github.io/Arithmo-Edge/#website"
+            },
+            "about": {
+              "@id": "https://rayaantasnim.github.io/Arithmo-Edge/#organization"
+            },
+            "publisher": {
+              "@id": "https://rayaantasnim.github.io/Arithmo-Edge/#organization"
+            },
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "https://images.pexels.com/photos/17683457/pexels-photo-17683457.jpeg?auto=compress&cs=tinysrgb&w=1600",
+              "width": 1200,
+              "height": 630
+            },
+            "mainEntity": {
+              "@id": "https://rayaantasnim.github.io/Arithmo-Edge/architecture.html#federated-architecture"
+            },
+            "breadcrumb": {
+              "@id": "https://rayaantasnim.github.io/Arithmo-Edge/architecture.html#breadcrumb"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://rayaantasnim.github.io/Arithmo-Edge/architecture.html#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://rayaantasnim.github.io/Arithmo-Edge/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "14-Website Federated Architecture",
+                "item": "https://rayaantasnim.github.io/Arithmo-Edge/architecture.html"
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://rayaantasnim.github.io/Arithmo-Edge/architecture.html#federated-architecture",
+            "name": "Arithmo-Edge 14-Site Federated Olympiad Architecture",
+            "applicationCategory": "EducationalApplication",
+            "operatingSystem": "Web",
+            "url": "https://rayaantasnim.github.io/Arithmo-Edge/architecture.html",
+            "provider": {
+              "@id": "https://rayaantasnim.github.io/Arithmo-Edge/#organization"
+            },
+            "description": "Federated micro-frontend architecture deploying 1 Core Portal + 13 Subsites as isolated micro-frontends on GitHub Pages (arithmo-edge.github.io/...) unified by Arithmo-Core-SDK (engine.js), with blast-radius isolation, independent CI/CD releases, zero-cost edge hosting, Dual-Storage Hybrid Data Lake (hot Cloud Firestore + cold 24-hour private GitHub Zero-PII JSONL Lake), Cloudflare Worker Edge Proxy with 98% Firestore read reduction via Read-Shield snapshots and Stale-While-Revalidate cache, and client-side BigInt Miller-Rabin + Brent-Pollard's Rho deterministic math engine.",
+            "featureList": [
+              "Federated Micro-Frontend Thesis: 1 Core Portal + 13 Subsites on GitHub Pages with blast-radius isolation, independent CI/CD releases, and zero-cost edge hosting",
+              "Arithmo-Core-SDK (engine.js) Federated Handshake: (1) Hydrate Gmail SSO Session & @handle Claim (Firebase Auth), (2) Resolve Dual-Handle Context (Personal vs Academy @handle), (3) Sync 10 Core Arena ELOs + HQ ELO + Contribution ELO, (4) Enforce Contest Hard-Lock on Subsite #8 (Arithmo Personal AI), (5) Dispatch AES-256 Telemetry & IndexedDB Offline Draft Checkpoints",
+              "Dual-Storage Hybrid Data Lake: Hot storage on Unified Cloud Firestore (sub-second live match scores, 14 real-time leaderboards, 1v1 Bullet Blitz rooms, Arithmo Wallet ledger, donors Patron Wall webhooks, live clarifications in 100-minute contests) + Cold storage via automated 24h GitHub Actions stripping PII and flushing submissions, MBTS telemetry, and Find the Flaw traces into compressed .jsonl shards in a private GitHub repository",
+              "Zero-Cost Edge Defense: Cloudflare Worker Edge Proxy (Token & PAT isolation for Golden Vault .json and Gemini/Qwen-Math dispatches), Read-Shield Snapshot Pattern (98% Firestore read reduction), and Stale-While-Revalidate deterministic local cache",
+              "Client-Side Deterministic Math Engine: Browser BigInt Miller-Rabin primality screening and Brent-Pollard's Rho factorization with zero server latency, Web Audio API timer cues, and IndexedDB offline submission persistence",
+              "Open-Source Organization Repositories: BluePrint (github.com/Arithmo-Edge/BluePrint), JSON-Converter (github.com/Arithmo-Edge/JSON-Converter), and Arithmo-Core-SDK (github.com/Arithmo-Edge/Arithmo-Core-SDK)"
+            ],
+            "hasPart": [
+              {
+                "@type": "WebApplication",
+                "@id": "https://rayaantasnim.github.io/Arithmo-Edge/architecture.html#portal-00-core",
+                "name": "00 · Core Portal — Arithmo-Edge Core Portal",
+                "url": "https://arithmo-edge.github.io/Arithmo-Edge/",
+                "applicationCategory": "EducationalApplication",
+                "description": "Primary hub for Gmail SSO, custom @handle registration (7-day 1-time free change; $2.99 once/year thereafter; permanent @handle tombstone upon deletion while anonymized Zero-PII data remains for AI training), Subscriptions & 7-day 1-time free trial, Closed-loop Personal Arithmo Wallet, Free Printable Guidebook, Overall All-Rounder Rating, and Support the 13-Year-Old System Architect / Buy Me a Coffee. Access Policy: Guest Browsing Permitted; @handle Required for Rated, Wallet & Subscriptions."
+              },
+              {
+                "@type": "WebApplication",
+                "@id": "https://rayaantasnim.github.io/Arithmo-Edge/architecture.html#portal-01-number-theory",
+                "name": "01 · Subsite #1 — Number Theory Arena",
+                "url": "https://arithmo-edge.github.io/number-theory/",
+                "applicationCategory": "EducationalApplication",
+                "description": "Subsite #1 in the Arithmo-Edge 14-portal federation dedicated to the Number Theory Arena."
+              },
+              {
+                "@type": "WebApplication",
+                "@id": "https://rayaantasnim.github.io/Arithmo-Edge/architecture.html#portal-02-algebra",
+                "name": "02 · Subsite #2 — Algebra Arena",
+                "url": "https://arithmo-edge.github.io/algebra/",
+                "applicationCategory": "EducationalApplication",
+                "description": "Subsite #2 in the Arithmo-Edge 14-portal federation dedicated to the Algebra Arena."
+              },
+              {
+                "@type": "WebApplication",
+                "@id": "https://rayaantasnim.github.io/Arithmo-Edge/architecture.html#portal-03-geometry",
+                "name": "03 · Subsite #3 — Geometry Arena",
+                "url": "https://arithmo-edge.github.io/geometry/",
+                "applicationCategory": "EducationalApplication",
+                "description": "Subsite #3 in the Arithmo-Edge 14-portal federation dedicated to the Geometry Arena."
+              },
+              {
+                "@type": "WebApplication",
+                "@id": "https://rayaantasnim.github.io/Arithmo-Edge/architecture.html#portal-04-combinatorics",
+                "name": "04 · Subsite #4 — Combinatorics & Permutation",
+                "url": "https://arithmo-edge.github.io/combinatorics/",
+                "applicationCategory": "EducationalApplication",
+                "description": "Subsite #4 in the Arithmo-Edge 14-portal federation dedicated to Combinatorics & Permutation."
+              },
+              {
+                "@type": "WebApplication",
+                "@id": "https://rayaantasnim.github.io/Arithmo-Edge/architecture.html#portal-05-mixed-olympiad",
+                "name": "05 · Subsite #5 — Mixed Mathematical Olympiad",
+                "url": "https://arithmo-edge.github.io/mixed-olympiad/",
+                "applicationCategory": "EducationalApplication",
+                "description": "Subsite #5 in the Arithmo-Edge 14-portal federation dedicated to the Mixed Mathematical Olympiad arena."
+              },
+              {
+                "@type": "WebApplication",
+                "@id": "https://rayaantasnim.github.io/Arithmo-Edge/architecture.html#portal-06-contests",
+                "name": "06 · Subsite #6 — Contest Section Portal",
+                "url": "https://arithmo-edge.github.io/contests/",
+                "applicationCategory": "EducationalApplication",
+                "description": "Subsite #6 in the Arithmo-Edge 14-portal federation serving as the Contest Section Portal."
+              },
+              {
+                "@type": "WebApplication",
+                "@id": "https://rayaantasnim.github.io/Arithmo-Edge/architecture.html#portal-07-standings",
+                "name": "07 · Subsite #7 — Standings Portal",
+                "url": "https://arithmo-edge.github.io/standings/",
+                "applicationCategory": "EducationalApplication",
+                "description": "Subsite #7 in the Arithmo-Edge 14-portal federation serving as the Standings Portal."
+              },
+              {
+                "@type": "WebApplication",
+                "@id": "https://rayaantasnim.github.io/Arithmo-Edge/architecture.html#portal-08-arithmo-ai",
+                "name": "08 · Subsite #8 — Arithmo Personal AI",
+                "url": "https://arithmo-edge.github.io/arithmo-ai/",
+                "applicationCategory": "EducationalApplication",
+                "description": "Subsite #8 in the Arithmo-Edge 14-portal federation hosting Arithmo Personal AI with contest hard-lock enforcement."
+              },
+              {
+                "@type": "WebApplication",
+                "@id": "https://rayaantasnim.github.io/Arithmo-Edge/architecture.html#portal-09-academy",
+                "name": "09 · Subsite #9 — Arithmo Academy Arena",
+                "url": "https://arithmo-edge.github.io/academy/",
+                "applicationCategory": "EducationalApplication",
+                "description": "Subsite #9 in the Arithmo-Edge 14-portal federation hosting Arithmo Academy Arena."
+              },
+              {
+                "@type": "WebApplication",
+                "@id": "https://rayaantasnim.github.io/Arithmo-Edge/architecture.html#portal-10-arithmo-forge",
+                "name": "10 · Subsite #10 — Arithmo Forge",
+                "url": "https://arithmo-edge.github.io/arithmo-forge/",
+                "applicationCategory": "EducationalApplication",
+                "description": "Subsite #10 in the Arithmo-Edge 14-portal federation hosting Arithmo Forge."
+              },
+              {
+                "@type": "WebApplication",
+                "@id": "https://rayaantasnim.github.io/Arithmo-Edge/architecture.html#portal-11-socials",
+                "name": "11 · Subsite #11 — Arithmo Socials",
+                "url": "https://arithmo-edge.github.io/socials/",
+                "applicationCategory": "SocialNetworkingApplication",
+                "description": "Subsite #11 in the Arithmo-Edge 14-portal federation hosting Arithmo Socials."
+              },
+              {
+                "@type": "WebApplication",
+                "@id": "https://rayaantasnim.github.io/Arithmo-Edge/architecture.html#portal-12-hq-core",
+                "name": "12 · Subsite #12 — Headquarters Core",
+                "url": "https://arithmo-edge.github.io/hq-core/",
+                "applicationCategory": "BusinessApplication",
+                "description": "Subsite #12 in the Arithmo-Edge 14-portal federation hosting Headquarters Core."
+              },
+              {
+                "@type": "WebApplication",
+                "@id": "https://rayaantasnim.github.io/Arithmo-Edge/architecture.html#portal-13-arithmo-database",
+                "name": "13 · Subsite #13 (14th Site) — Arithmo Database",
+                "url": "https://arithmo-edge.github.io/arithmo-database/",
+                "applicationCategory": "EducationalApplication",
+                "description": "Subsite #13 (14th site, launching after Subsites #1-#12): Arithmo Database & Editorials cataloging historical Arithmo rounds across the 5 arenas alongside IMO, Putnam, RMM, BMO, and BdMO archives enriched with AI-Generated Step-by-Step Editorials."
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body class="selection:bg-cyan-400/30 selection:text-cyan-100">
+    <div id="root" data-page="architecture.html"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

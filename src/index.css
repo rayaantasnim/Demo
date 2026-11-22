@@ -1,0 +1,1399 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ============================================================================
+   Arithmo-Edge Design System — Obsidian Dark Mode + Domain Arena Accents
+   ============================================================================ */
+:root {
+  --ae-bg-obsidian: #03050c;
+  --ae-bg-deep: #070b16;
+  --ae-bg-surface: rgba(11, 17, 34, 0.78);
+  --ae-bg-surface-strong: rgba(7, 11, 22, 0.95);
+
+  --ae-ink-primary: #f1f5f9;
+  --ae-ink-secondary: #cbd5e1;
+  --ae-ink-muted: #94a3b8;
+
+  --ae-border-hairline: rgba(148, 163, 184, 0.18);
+  --ae-border-accent: rgba(0, 240, 255, 0.42);
+
+  /* Domain-coded Arena Palette */
+  --ae-cyan: #00f0ff;
+  --ae-violet: #8b5cf6;
+  --ae-amber: #f59e0b;
+  --ae-emerald: #10b981;
+  --ae-rose: #f43f5e;
+
+  --ae-nav-height: 66px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --ae-nav-height: 82px;
+  }
+}
+
+@layer base {
+  html {
+    background-color: var(--ae-bg-obsidian);
+    color: var(--ae-ink-primary);
+    font-family:
+      "Plus Jakarta Sans",
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: clip;
+  }
+
+  body {
+    min-height: 100vh;
+    background-color: var(--ae-bg-obsidian);
+    color: var(--ae-ink-primary);
+    overflow-x: clip;
+    padding-top: var(--ae-nav-height);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image:
+      radial-gradient(
+        ellipse 90% 52% at 50% -10%,
+        rgba(0, 240, 255, 0.16),
+        transparent 64%
+      ),
+      radial-gradient(
+        circle at 88% 18%,
+        rgba(139, 92, 246, 0.16),
+        transparent 48%
+      ),
+      radial-gradient(
+        circle at 12% 58%,
+        rgba(244, 63, 94, 0.12),
+        transparent 46%
+      ),
+      linear-gradient(
+        to right,
+        rgba(148, 163, 184, 0.036) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        to bottom,
+        rgba(148, 163, 184, 0.036) 1px,
+        transparent 1px
+      );
+    background-size:
+      100% 100%,
+      100% 100%,
+      100% 100%,
+      56px 56px,
+      56px 56px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-display {
+    font-family: "Syne", "Outfit", "Plus Jakarta Sans", system-ui, sans-serif;
+    letter-spacing: -0.025em;
+  }
+
+  h1,
+  h2 {
+    text-wrap: balance;
+  }
+}
+
+.font-mono-tabular {
+  font-family:
+    "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Fluid Typographic Scale using clamp() */
+.hero-title-fluid {
+  font-size: clamp(1.95rem, 1.35rem + 2.5vw, 3.55rem);
+  line-height: 1.07;
+  letter-spacing: -0.032em;
+}
+
+.section-title-fluid {
+  font-size: clamp(1.42rem, 1.15rem + 1.35vw, 2.35rem);
+  line-height: 1.15;
+  letter-spacing: -0.024em;
+}
+
+.prose-measure {
+  max-width: 68ch;
+}
+
+/* Justified Long-Form Prose (only applied to multi-sentence paragraphs, never headings or UI labels) */
+.ae-prose {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+/* Layout Container */
+.ae-container {
+  width: 100%;
+  max-width: 1380px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Brand Gradient */
+.brand-gradient {
+  background: linear-gradient(
+    110deg,
+    #ffffff 0%,
+    #a5f3fc 45%,
+    #38bdf8 78%,
+    #a78bfa 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Glass Navbar & Drawer */
+.glass-nav {
+  background: rgba(5, 8, 17, 0.86);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--ae-border-hairline);
+}
+
+.glass-drawer {
+  background: rgba(6, 10, 22, 0.97);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-left: 1px solid rgba(0, 240, 255, 0.2);
+  box-shadow: -20px 0 60px rgba(0, 0, 0, 0.7);
+}
+
+/* Flagship Cyber-Glass Footer */
+.ae-footer {
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(5, 8, 17, 0.95);
+  background-image:
+    radial-gradient(ellipse at bottom, rgba(0, 240, 255, 0.08), transparent 70%),
+    radial-gradient(ellipse 65% 55% at 88% 92%, rgba(79, 70, 229, 0.09), transparent 70%);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+}
+
+.ae-footer-aurora {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 240, 255, 0.5),
+    rgba(139, 92, 246, 0.5),
+    rgba(244, 63, 94, 0.4),
+    transparent
+  );
+  pointer-events: none;
+}
+
+.ae-footer-aurora-glow {
+  position: absolute;
+  top: 0;
+  left: 8%;
+  right: 8%;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 240, 255, 0.42),
+    rgba(139, 92, 246, 0.42),
+    rgba(244, 63, 94, 0.32),
+    transparent
+  );
+  filter: blur(5px);
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.ae-footer-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid rgba(0, 240, 255, 0.45);
+  box-shadow: 0 0 18px rgba(0, 240, 255, 0.25);
+}
+
+.ae-footer-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.5rem;
+  background: rgba(8, 17, 34, 0.82);
+  border: 1px solid rgba(0, 240, 255, 0.28);
+  box-shadow: inset 0 0 16px rgba(0, 240, 255, 0.06);
+  font-family:
+    "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    monospace;
+  font-variant-numeric: tabular-nums;
+  font-size: 10.5px;
+  line-height: 1.3;
+  letter-spacing: 0.06em;
+  color: #a5f3fc;
+}
+
+.ae-footer-matrix-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
+  transition:
+    color 160ms ease,
+    border-color 160ms ease,
+    background-color 160ms ease;
+}
+
+.ae-footer-matrix-link:hover {
+  border-color: rgba(0, 240, 255, 0.24);
+  background: rgba(15, 23, 42, 0.65);
+  color: #67e8f9;
+}
+
+.ae-footer-matrix-link[aria-current="page"] {
+  border-color: rgba(0, 240, 255, 0.38);
+  background: rgba(0, 240, 255, 0.08);
+  color: #a5f3fc;
+  font-weight: 600;
+}
+
+.ae-footer-arrow {
+  opacity: 0;
+  transform: translateX(-4px);
+  color: #22d3ee;
+  transition:
+    opacity 160ms ease,
+    transform 160ms ease;
+}
+
+.ae-footer-matrix-link:hover .ae-footer-arrow,
+.ae-footer-matrix-link[aria-current="page"] .ae-footer-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.ae-footer-social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0.55rem 0.75rem;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #e2e8f0;
+  background: rgba(12, 20, 38, 0.78);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  transition:
+    border-color 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.ae-footer-social-btn:hover {
+  background: rgba(18, 30, 56, 0.92);
+  border-color: rgba(0, 240, 255, 0.55);
+  box-shadow: 0 0 18px rgba(0, 240, 255, 0.16);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.ae-footer-social-btn[data-tone="violet"]:hover {
+  border-color: rgba(139, 92, 246, 0.6);
+  box-shadow: 0 0 18px rgba(139, 92, 246, 0.2);
+}
+
+.ae-footer-social-btn[data-tone="rose"]:hover {
+  border-color: rgba(244, 63, 94, 0.6);
+  box-shadow: 0 0 18px rgba(244, 63, 94, 0.2);
+}
+
+.ae-footer-hr {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.08);
+  margin: 28px 0 20px;
+}
+
+.nav-brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.nav-brand-logo {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  object-fit: cover;
+  border: 1px solid rgba(0, 240, 255, 0.35);
+  box-shadow: 0 0 18px rgba(0, 240, 255, 0.16);
+  flex-shrink: 0;
+}
+
+/* Vivid Gradient Titles, Scroll Progress & Luminous Dividers */
+.ae-title-gradient {
+  background: linear-gradient(115deg, #ffffff 10%, #e0f2fe 54%, #a5f3fc 84%, #c4b5fd 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.ae-aurora-divider {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 240, 255, 0.5),
+    rgba(139, 92, 246, 0.5),
+    rgba(244, 63, 94, 0.42),
+    transparent
+  );
+}
+
+.ae-scroll-progress {
+  position: fixed;
+  top: var(--ae-nav-height);
+  left: 0;
+  right: 0;
+  height: 2.5px;
+  z-index: 995;
+  transform-origin: left center;
+  transform: scaleX(0);
+  background: linear-gradient(
+    90deg,
+    #00f0ff 0%,
+    #8b5cf6 32%,
+    #f59e0b 62%,
+    #10b981 82%,
+    #f43f5e 100%
+  );
+  box-shadow: 0 0 14px rgba(0, 240, 255, 0.55);
+  pointer-events: none;
+}
+
+/* Luminous Cyber-Glass Cards, 3D Tilt & Specular Cursor Glare */
+.glass-panel {
+  position: relative;
+  background: linear-gradient(155deg, rgba(14, 22, 44, 0.84) 0%, rgba(7, 11, 24, 0.92) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--ae-border-hairline);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+
+.spotlight-card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(155deg, rgba(14, 22, 44, 0.84) 0%, rgba(7, 11, 24, 0.92) 100%);
+  border: 1px solid var(--ae-border-hairline);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    0 10px 30px -12px rgba(0, 0, 0, 0.6);
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition:
+    border-color 220ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 260ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 180ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.spotlight-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    440px circle at var(--glare-x, var(--mouse-x, 50%)) var(--glare-y, var(--mouse-y, 50%)),
+    rgba(0, 240, 255, 0.12),
+    rgba(139, 92, 246, 0.05) 38%,
+    transparent 68%
+  );
+  opacity: 0;
+  transition: opacity 220ms ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.spotlight-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 240, 255, 0.45),
+    rgba(139, 92, 246, 0.35),
+    rgba(244, 63, 94, 0.28)
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.26;
+  transition: opacity 220ms ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.spotlight-card:hover {
+  border-color: rgba(0, 240, 255, 0.46);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.22),
+    0 12px 40px -10px rgba(0, 240, 255, 0.28);
+}
+
+.spotlight-card:hover::before {
+  opacity: 1;
+}
+
+.spotlight-card:hover::after {
+  opacity: 0.85;
+}
+
+.ae-z-28 {
+  transform: translateZ(28px);
+}
+
+.ae-z-45 {
+  transform: translateZ(45px);
+}
+
+/* Tactile Spring Action Buttons (>= 44px min tap safety on interactive icons) */
+.btn-cyber {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  color: #03050c;
+  background: linear-gradient(135deg, #22d3ee 0%, #38bdf8 52%, #8b5cf6 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.38),
+    0 8px 26px rgba(0, 240, 255, 0.28);
+  transition:
+    transform 240ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 240ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 200ms ease;
+  cursor: pointer;
+}
+
+.btn-cyber:hover {
+  filter: brightness(1.08);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    0 12px 34px rgba(0, 240, 255, 0.42);
+}
+
+.btn-cyber:active {
+  transform: scale(0.96);
+}
+
+.btn-glass {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  color: var(--ae-ink-primary);
+  background: rgba(11, 18, 36, 0.82);
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  transition:
+    border-color 220ms ease,
+    background-color 220ms ease,
+    box-shadow 220ms ease,
+    transform 240ms cubic-bezier(0.22, 1, 0.36, 1);
+  cursor: pointer;
+}
+
+.btn-glass:hover {
+  border-color: rgba(0, 240, 255, 0.52);
+  background: rgba(18, 29, 56, 0.94);
+  box-shadow: 0 8px 26px -8px rgba(0, 240, 255, 0.24);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.btn-glass:active {
+  transform: scale(0.96);
+}
+
+/* Media Frames & Cyber-Glass Image Tint */
+.media-frame,
+.ae-media-cyber {
+  position: relative;
+  overflow: hidden;
+  background: #070b16;
+}
+
+.ae-media-cyber {
+  border: 1px solid rgba(0, 240, 255, 0.24);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    0 14px 36px -12px rgba(0, 0, 0, 0.72);
+}
+
+.ae-media-cyber::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(0, 240, 255, 0.12) 0%, transparent 45%, rgba(139, 92, 246, 0.14) 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.media-frame img,
+.ae-media-cyber img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 480ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.group:hover .media-frame img,
+.ae-media-cyber:hover img {
+  transform: scale(1.04);
+}
+
+/* 3D Rotating Arena Showcase Stage */
+.ae-stage-perspective {
+  perspective: 1400px;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .spotlight-card {
+    transform: none !important;
+  }
+  .btn-cyber:hover,
+  .btn-glass:hover {
+    transform: none;
+  }
+}
+
+@keyframes ae-shake-rose {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
+
+.ae-shake-rose {
+  animation: ae-shake-rose 0.42s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  border-color: #f43f5e !important;
+  box-shadow: 0 0 0 2px rgba(244, 63, 94, 0.35);
+}
+
+/* Custom Range Input */
+.cyber-range {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(30, 41, 59, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  outline: none;
+}
+
+.cyber-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--ae-cyan);
+  border: 2px solid #050811;
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.55);
+  cursor: pointer;
+}
+
+.cyber-range::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--ae-cyan);
+  border: 2px solid #050811;
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.55);
+  cursor: pointer;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #040710;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* ============================================================================
+   7 Custom CSS3 Device Breakpoints (320px .. 1536px+)
+   ============================================================================ */
+
+/* 1. Ultra-Small Mobile (<= 374px) */
+@media (max-width: 374px) {
+  :root {
+    --ae-nav-height: 60px;
+  }
+  .nav-tagline {
+    display: none;
+  }
+  .ae-container {
+    padding-left: 0.875rem;
+    padding-right: 0.875rem;
+  }
+  .hero-title-fluid {
+    font-size: 1.65rem;
+  }
+  .ae-countdown-grid {
+    gap: 0.375rem;
+  }
+  .ae-bento-grid,
+  .ae-bento-grid-3,
+  .ae-deep-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  button,
+  [role="button"],
+  .btn-cyber,
+  .btn-glass {
+    min-height: 44px;
+  }
+}
+
+/* 2. Standard Mobile (375px – 639px) */
+@media (min-width: 375px) and (max-width: 639px) {
+  :root {
+    --ae-nav-height: 64px;
+  }
+  .nav-tagline {
+    display: none;
+  }
+  .ae-bento-grid,
+  .ae-bento-grid-3,
+  .ae-deep-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .ae-hero-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  button,
+  [role="button"],
+  .btn-cyber,
+  .btn-glass {
+    min-height: 44px;
+  }
+}
+
+/* 3. Large Mobile / Phablet (640px – 767px) */
+@media (min-width: 640px) and (max-width: 767px) {
+  :root {
+    --ae-nav-height: 66px;
+  }
+  .nav-tagline {
+    display: none;
+  }
+  .ae-kpi-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .ae-deep-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  button,
+  [role="button"],
+  .btn-cyber,
+  .btn-glass {
+    min-height: 44px;
+  }
+}
+
+/* 4. Tablet Portrait & Landscape (768px – 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  :root {
+    --ae-nav-height: 82px;
+  }
+  .nav-tagline {
+    display: block;
+    max-width: 30rem;
+    line-height: 1.28;
+    white-space: normal;
+  }
+  #nav-drawer-panel {
+    width: 420px;
+    max-width: 420px;
+  }
+}
+
+/* 5. Standard Laptops (1024px – 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  :root {
+    --ae-nav-height: 82px;
+  }
+  .nav-tagline {
+    display: block;
+    max-width: 42rem;
+    line-height: 1.3;
+    white-space: normal;
+  }
+  .ae-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  #nav-drawer-panel {
+    width: 450px;
+    max-width: 450px;
+  }
+}
+
+/* 6. Full HD Desktops (1280px – 1535px) */
+@media (min-width: 1280px) and (max-width: 1535px) {
+  :root {
+    --ae-nav-height: 82px;
+  }
+  .nav-tagline {
+    display: block;
+    max-width: 48rem;
+    line-height: 1.3;
+    white-space: normal;
+  }
+  .ae-container {
+    max-width: 1300px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  #nav-drawer-panel {
+    width: 460px;
+    max-width: 460px;
+  }
+}
+
+/* 7. 2K / 4K Ultra-Wide Displays (>= 1536px) */
+@media (min-width: 1536px) {
+  :root {
+    --ae-nav-height: 84px;
+  }
+  .nav-tagline {
+    display: block;
+    max-width: 56rem;
+    line-height: 1.3;
+    white-space: normal;
+  }
+  .ae-container {
+    max-width: 1440px;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
+  #nav-drawer-panel {
+    width: 460px;
+    max-width: 460px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================================================
+   RESPONSIVE LAYOUT HARDENING (additive, non-destructive)
+   ----------------------------------------------------------------------------
+   Layout / overlap / overflow guards only. No design tokens, colors, copy,
+   markup or scripts are touched. Rules are appended AFTER the base design
+   system so they win cascade order over Tailwind's layered utilities.
+   Never sets `display` on elements that toggle the `.hidden` utility.
+
+   Viewport buckets covered:
+   <=374 | 375-639 | 640-767 | 768-1023 | 1024-1279 | 1280-1535 | >=1536
+   ============================================================================ */
+
+/* ---- A. Global guards (all viewports) ------------------------------------ */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--ae-nav-height) + 1rem);
+}
+
+/* Anchor targets (e.g. #comparison-matrix) never land under the fixed header */
+[id] {
+  scroll-margin-top: calc(var(--ae-nav-height) + 1rem);
+}
+
+img,
+video,
+canvas,
+iframe {
+  max-width: 100%;
+}
+
+/* Grid children may shrink below their content width instead of forcing overflow */
+.grid > * {
+  min-width: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  overflow-wrap: break-word;
+}
+
+pre {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+code {
+  overflow-wrap: anywhere;
+}
+
+.btn-cyber,
+.btn-glass {
+  max-width: 100%;
+  text-align: center;
+}
+
+/* Horizontally scrollable panels stay contained and touch-friendly */
+.overflow-x-auto {
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+}
+
+/* Section header action slot (filter tabs, CTAs) may wrap instead of overflowing */
+[data-3d-reveal].flex-wrap > .shrink-0 {
+  flex-shrink: 1;
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* ---- B. Fixed header clearance -------------------------------------------- */
+/* Header's real height always equals --ae-nav-height (= body padding-top), so
+   page titles are never overlapped at any breakpoint. */
+.glass-nav > .ae-container {
+  /* minus the 1px hairline border-bottom so total header height == nav var */
+  min-height: calc(var(--ae-nav-height) - 1px);
+}
+
+.nav-tagline {
+  overflow-wrap: anywhere;
+}
+
+#nav-drawer-panel {
+  /* width caps stay as designed; only guard against mobile browser chrome */
+  max-height: 100vh;
+  max-height: 100dvh;
+}
+
+/* ---- C. 60-Second Guest Math Duel & Instant ELO Estimator ---------------- */
+[data-guest-duel-root] {
+  min-width: 0;
+  max-width: 100%;
+}
+
+[data-guest-duel-root] h3 {
+  line-height: 1.22;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+
+[data-guest-duel-root] [data-gd-meta],
+[data-guest-duel-root] [data-gd-arena],
+[data-guest-duel-root] [data-gd-elo],
+[data-guest-duel-root] [data-gd-elo-sub],
+[data-guest-duel-root] [data-gd-elo-val],
+[data-guest-duel-root] [data-gd-handle-status],
+[data-guest-duel-root] [data-gd-handle-notice],
+[data-guest-duel-root] [data-gd-wrong-text] {
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+/* Math statements & explanations: roomy line-height so Unicode superscripts /
+   subscripts (2²⁰²⁶, aₙ₊₂, x²) never collide with adjacent lines */
+[data-guest-duel-root] [data-gd-statement],
+[data-guest-duel-root] [data-gd-hint-text],
+[data-guest-duel-root] [data-gd-timeout-explain],
+[data-guest-duel-root] [data-gd-solved-explain] {
+  line-height: 1.85;
+  overflow-wrap: anywhere;
+  hyphens: none;
+  -webkit-hyphens: none;
+  text-align: left;
+  text-wrap: pretty;
+}
+
+[data-guest-duel-root] [data-gd-hint-box] {
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+/* Cascade fix: `.btn-cyber { display:inline-flex }` is unlayered and therefore
+   beats Tailwind's layered `hidden` utility, so the Start button never hid.
+   Restore the intended hidden state (display only; markup untouched). */
+[data-guest-duel-root] [data-gd-start].hidden {
+  display: none;
+}
+
+/* Clock + Switch Problem cluster wraps rather than overflowing the header row */
+[data-guest-duel-root] div:has(> [data-gd-clock-wrap]) {
+  flex-wrap: wrap;
+}
+
+/* Answer form: wraps at every width; input gets a basis wide enough for its
+   placeholder so "Click Start 60s Guest Duel..." is never clipped */
+[data-guest-duel-root] [data-gd-form] {
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+[data-guest-duel-root] [data-gd-form] [data-gd-input] {
+  flex: 1 1 17rem;
+  min-width: 0;
+  max-width: 100%;
+  text-overflow: ellipsis;
+}
+
+[data-guest-duel-root] [data-gd-input]::placeholder {
+  font-size: 0.8125rem;
+  text-overflow: ellipsis;
+}
+
+[data-guest-duel-root] .btn-cyber,
+[data-guest-duel-root] .btn-glass {
+  flex-shrink: 1;
+  max-width: 100%;
+  white-space: normal;
+  line-height: 1.25;
+  text-align: center;
+}
+
+/* Telemetry panel header (two mono labels) wraps instead of colliding */
+[data-guest-duel-root] .lg\:col-span-5 > .flex.justify-between {
+  flex-wrap: wrap;
+  gap: 0.25rem 0.75rem;
+}
+
+/* @handle preview form: input + button wrap into stacked rows when tight */
+[data-guest-duel-root] [data-gd-handle-form] > .flex {
+  flex-wrap: wrap;
+}
+
+[data-guest-duel-root] [data-gd-handle-form] input {
+  flex: 1 1 9rem;
+  min-width: 0;
+}
+
+[data-guest-duel-root] [data-gd-handle-btn] {
+  flex: 1 1 auto;
+}
+
+/* Timeout actions (Retry / Next) wrap safely */
+[data-guest-duel-root] [data-gd-timeout] .flex.gap-2 {
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+[data-guest-duel-root] #gd-timeout-title {
+  min-width: 0;
+  flex: 1 1 14rem;
+  overflow-wrap: anywhere;
+}
+
+/* ---- D. Comparison Matrix: filter tabs, table, verdict ------------------- */
+[data-matrix-cat] {
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
+  line-height: 1.25;
+}
+
+div:has(> [data-matrix-cat]) {
+  max-width: 100%;
+}
+
+[data-matrix-row] {
+  min-width: 0;
+}
+
+[data-matrix-row] > * {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+[data-matrix-verdict-dim],
+[data-matrix-verdict-title],
+[data-matrix-verdict-reason] {
+  overflow-wrap: anywhere;
+}
+
+/* ---- E. Shared tables, bars & compact grids ------------------------------ */
+.ae-countdown-grid > div,
+[data-countdown] > div {
+  min-width: 0;
+}
+
+[data-cd] {
+  overflow-wrap: normal;
+  white-space: nowrap;
+}
+
+[data-sbg-persona],
+[data-ws-topup-amt] {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+/* ============================================================================
+   Breakpoint 1 · Ultra-Small Mobile (<= 374px)
+   ============================================================================ */
+@media (max-width: 374px) {
+  /* 44px tap targets + default py-2 would exceed the 60px nav var */
+  .glass-nav > .ae-container {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    overflow-wrap: anywhere;
+    hyphens: manual;
+  }
+
+  .ae-prose {
+    text-align: left;
+    hyphens: manual;
+    -webkit-hyphens: manual;
+  }
+
+  [data-guest-duel-root] {
+    padding: 1rem;
+  }
+
+  [data-guest-duel-root] .lg\:col-span-5 {
+    padding: 0.875rem;
+  }
+
+  [data-guest-duel-root] [data-gd-input]::placeholder {
+    font-size: 0.75rem;
+  }
+
+  [data-guest-duel-root] [data-gd-form] [data-gd-input] {
+    flex-basis: 100%;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  [data-guest-duel-root] [data-gd-form] .btn-cyber,
+  [data-guest-duel-root] [data-gd-form] .btn-glass,
+  [data-guest-duel-root] [data-gd-handle-btn],
+  [data-guest-duel-root] [data-gd-timeout] .btn-cyber,
+  [data-guest-duel-root] [data-gd-timeout] .btn-glass {
+    flex: 1 1 100%;
+  }
+
+  [data-guest-duel-root] [data-gd-handle-form] input {
+    flex-basis: 100%;
+  }
+
+  [data-guest-duel-root] [data-gd-clock-wrap] {
+    min-width: 88px;
+  }
+
+  div:has(> [data-matrix-cat]) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+  }
+
+  [data-cd] {
+    font-size: 1.35rem;
+  }
+
+  .ae-countdown-grid > div,
+  [data-countdown] > div {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+
+  /* 10-column allocation bar stacks so no label is truncated */
+  .grid-cols-10 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .grid-cols-10 > * {
+    grid-column: 1 / -1;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
+
+  /* Matrix rows stack; header row becomes a wrapping legend */
+  [data-matrix-row]:not(.hidden) {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    padding: 0.875rem 1rem;
+  }
+
+  div:has(+ div > [data-matrix-row]) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1rem;
+    padding: 0.75rem 1rem;
+  }
+
+  [class*="min-w-[760px]"] {
+    min-width: 0;
+  }
+}
+
+/* ============================================================================
+   Breakpoint 2 · Standard Mobile (375px – 639px)
+   ============================================================================ */
+@media (min-width: 375px) and (max-width: 639px) {
+  h1,
+  h2,
+  h3,
+  h4 {
+    overflow-wrap: anywhere;
+  }
+
+  .ae-prose {
+    text-align: left;
+    hyphens: manual;
+    -webkit-hyphens: manual;
+  }
+
+  [data-guest-duel-root] {
+    padding: 1.25rem;
+  }
+
+  [data-guest-duel-root] [data-gd-form] [data-gd-input] {
+    flex-basis: 100%;
+  }
+
+  [data-guest-duel-root] [data-gd-form] .btn-cyber,
+  [data-guest-duel-root] [data-gd-form] .btn-glass,
+  [data-guest-duel-root] [data-gd-handle-btn] {
+    flex: 1 1 auto;
+  }
+
+  [data-guest-duel-root] [data-gd-handle-form] input {
+    flex-basis: 100%;
+  }
+
+  div:has(> [data-matrix-cat]) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+  }
+
+  [data-cd] {
+    font-size: 1.6rem;
+  }
+
+  .grid-cols-10 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .grid-cols-10 > * {
+    grid-column: 1 / -1;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
+
+  [data-matrix-row]:not(.hidden) {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    padding: 0.875rem 1rem;
+  }
+
+  div:has(+ div > [data-matrix-row]) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1rem;
+    padding: 0.75rem 1rem;
+  }
+
+  [class*="min-w-[760px]"] {
+    min-width: 0;
+  }
+
+  main a {
+    overflow-wrap: anywhere;
+  }
+
+  .btn-cyber,
+  .btn-glass {
+    white-space: normal;
+  }
+}
+
+/* ============================================================================
+   Breakpoint 3 · Large Mobile / Phablet (640px – 767px)
+   ============================================================================ */
+@media (min-width: 640px) and (max-width: 767px) {
+  [data-guest-duel-root] [data-gd-form] [data-gd-input] {
+    flex-basis: 17rem;
+  }
+
+  .grid-cols-10 > .truncate {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+  }
+
+  [data-matrix-row]:not(.hidden) {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    padding: 0.875rem 1.25rem;
+  }
+
+  div:has(+ div > [data-matrix-row]) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.25rem;
+    padding: 0.75rem 1.25rem;
+  }
+
+  [class*="min-w-[760px]"] {
+    min-width: 0;
+  }
+
+  main a {
+    overflow-wrap: anywhere;
+  }
+}
+
+/* ============================================================================
+   Breakpoint 4 · Tablet (768px – 1023px)
+   ============================================================================ */
+@media (min-width: 768px) and (max-width: 1023px) {
+  [data-guest-duel-root] [data-gd-form] [data-gd-input] {
+    flex-basis: 17rem;
+  }
+
+  .grid-cols-10 > .truncate {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+  }
+
+  /* Matrix keeps its 3-column grid but fits the panel width */
+  [class*="min-w-[760px]"] {
+    min-width: 0;
+  }
+
+  [data-matrix-row] {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+/* ============================================================================
+   Breakpoint 5 · Standard Laptops (1024px – 1279px)
+   ============================================================================ */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  /* 7 / 5 column split is tight here: keep controls wrapped, readable */
+  [data-guest-duel-root] [data-gd-form] [data-gd-input] {
+    flex-basis: 17rem;
+  }
+
+  [data-guest-duel-root] [data-gd-handle-form] input {
+    flex-basis: 10rem;
+  }
+
+  .grid-cols-10 > .truncate {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+  }
+}
+
+/* ============================================================================
+   Breakpoint 6 · Full HD Desktops (1280px – 1535px)
+   ============================================================================ */
+@media (min-width: 1280px) and (max-width: 1535px) {
+  [data-guest-duel-root] [data-gd-form] [data-gd-input] {
+    flex-basis: 17rem;
+  }
+
+  [data-guest-duel-root] [data-gd-handle-form] input {
+    flex-basis: 10rem;
+  }
+}
+
+/* ============================================================================
+   Breakpoint 7 · 2K / 4K Ultra-Wide (>= 1536px)
+   ============================================================================ */
+@media (min-width: 1536px) {
+  [data-guest-duel-root] [data-gd-form] [data-gd-input] {
+    flex-basis: 17rem;
+  }
+
+  [data-guest-duel-root] [data-gd-handle-form] input {
+    flex-basis: 11rem;
+  }
+}

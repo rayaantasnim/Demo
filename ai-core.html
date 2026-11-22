@@ -1,0 +1,703 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>42-Engine Olympiad AI Core Architecture | Arithmo-Edge</title>
+    <meta
+      name="description"
+      content="Filter all 42 Arithmo-Edge AI engines uniting Gemini Pro, Qwen-Math, Python SymPy proof verification, Soft-Pinch advisories, Semantic Tokens, and QPRT-4 guards."
+    />
+    <link
+      rel="canonical"
+      href="https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html"
+    />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="author" content="Rayaan Tasnim, Jalees Habib" />
+    <meta name="theme-color" content="#0A0F1C" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Arithmo-Edge" />
+    <meta
+      property="og:title"
+      content="42-Engine Olympiad AI Core Architecture | Arithmo-Edge"
+    />
+    <meta
+      property="og:description"
+      content="Filter all 42 Arithmo-Edge AI engines powering Socratic tutoring, SymPy proof verification, Soft-Pinch advisories, and Semantic Token metering."
+    />
+    <meta
+      property="og:url"
+      content="https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html"
+    />
+    <meta
+      property="og:image"
+      content="https://images.pexels.com/photos/17683455/pexels-photo-17683455.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Arithmo-Edge 42-Engine AI Core combining Gemini, Qwen-Math, and Python SymPy"
+    />
+    <meta property="og:locale" content="en_US" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="42-Engine Olympiad AI Core Architecture | Arithmo-Edge"
+    />
+    <meta
+      name="twitter:description"
+      content="Filter all 42 Arithmo-Edge AI engines powering Socratic tutoring, SymPy proof verification, Soft-Pinch advisories, and Semantic Token metering."
+    />
+    <meta
+      name="twitter:image"
+      content="https://images.pexels.com/photos/3861964/pexels-photo-3861964.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Arithmo-Edge 42-Engine AI Core combining Gemini, Qwen-Math, and Python SymPy"
+    />
+
+    <link rel="icon" type="image/jpeg" href="favicon.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://rayaantasnim.github.io/Arithmo-Edge/#organization",
+            "name": "Arithmo-Edge",
+            "alternateName": "Olympiad Edge",
+            "url": "https://rayaantasnim.github.io/Arithmo-Edge/",
+            "logo": "https://rayaantasnim.github.io/Arithmo-Edge/favicon.jpg",
+            "email": "rayaantasnim@gmail.com",
+            "areaServed": "Worldwide",
+            "founder": [
+              {
+                "@type": "Person",
+                "@id": "https://rayaantasnim.github.io/Arithmo-Edge/pioneers.html#rayaan-tasnim",
+                "name": "Rayaan Tasnim",
+                "jobTitle": "Founder & Chief System Architect",
+                "email": "rayaantasnim@gmail.com",
+                "sameAs": [
+                  "https://github.com",
+                  "https://github.com/Arithmo-Edge"
+                ]
+              },
+              {
+                "@type": "Person",
+                "@id": "https://rayaantasnim.github.io/Arithmo-Edge/pioneers.html#jalees-habib",
+                "name": "Jalees Habib",
+                "jobTitle": "Co-Founder & Chief Mathematical Engineer",
+                "sameAs": [
+                  "https://www.youtube.com/@jaleeshabib",
+                  "https://www.chess.com/member/jaiees"
+                ]
+              }
+            ],
+            "sameAs": [
+              "https://github.com",
+              "https://github.com/Arithmo-Edge",
+              "https://www.youtube.com/@jaleeshabib",
+              "https://www.chess.com/member/jaiees",
+              "https://rayaantasnim.github.io/Arithmo-Edge/pioneers.html"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://rayaantasnim.github.io/Arithmo-Edge/#website",
+            "url": "https://rayaantasnim.github.io/Arithmo-Edge/",
+            "name": "Arithmo-Edge",
+            "alternateName": "Olympiad Edge",
+            "description": "The World's First Real-Time ELO-Rated Competitive Mathematics & Olympiad Mega-Ecosystem, Powered by Olympiad Edge.",
+            "inLanguage": "en-US",
+            "publisher": {
+              "@id": "https://rayaantasnim.github.io/Arithmo-Edge/#organization"
+            },
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://rayaantasnim.github.io/Arithmo-Edge/?q={search_term_string}"
+              },
+              "query-input": "required name=search_term_string"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#webpage",
+            "url": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html",
+            "name": "42-Engine Olympiad AI Core Architecture | Arithmo-Edge",
+            "description": "Filter all 42 Arithmo-Edge AI engines uniting Gemini Pro, Qwen-Math, Python SymPy proof verification, Soft-Pinch advisories, Semantic Tokens, and QPRT-4 guards.",
+            "inLanguage": "en-US",
+            "isPartOf": {
+              "@id": "https://rayaantasnim.github.io/Arithmo-Edge/#website"
+            },
+            "about": {
+              "@id": "https://rayaantasnim.github.io/Arithmo-Edge/#organization"
+            },
+            "publisher": {
+              "@id": "https://rayaantasnim.github.io/Arithmo-Edge/#organization"
+            },
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "https://images.pexels.com/photos/5473955/pexels-photo-5473955.jpeg?auto=compress&cs=tinysrgb&w=1600",
+              "width": 1200,
+              "height": 630
+            },
+            "mainEntity": {
+              "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#ai-core-directory"
+            },
+            "breadcrumb": {
+              "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#breadcrumb"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://rayaantasnim.github.io/Arithmo-Edge/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "42-Engine AI Core",
+                "item": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html"
+              }
+            ]
+          },
+          {
+            "@type": "ItemList",
+            "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#ai-core-directory",
+            "name": "42-Engine Hybrid Neural & Symbolic AI Core Directory",
+            "description": "Complete canonical directory of all 42 single-responsibility AI engines in Arithmo-Edge (2 Public Mentors + 2 Foundation + 24 QPRT-4 Guardians + 12 Question-Forge & Anti-LLM + 1 Deterrence AI + 1 Supreme Command Overlord AI) operating behind role-gated Cloudflare Worker proxies with zero raw client API keys and deterministic Python/SymPy proof verification.",
+            "numberOfItems": 42,
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#arithmo-personal-ai",
+                  "name": "Arithmo Personal AI",
+                  "applicationCategory": "EducationalApplication",
+                  "operatingSystem": "Web",
+                  "description": "Public Mentor AI (01/02, Subsite #8): Individual Socratic mathematics mentor offering guided discovery, post-contest upsolving, and AES-256 Soft-Pinch habit nudges with strict live-contest lockout."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#arithmo-guild-ai",
+                  "name": "Arithmo Guild AI",
+                  "applicationCategory": "EducationalApplication",
+                  "operatingSystem": "Web",
+                  "description": "Public Mentor AI (02/02, Subsite #9): Institutional cohort tutor supporting Academy Edu Labs, syllabus drills, and indivisible Academy ELO team contest preparation."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#google-gemini-pro-flash",
+                  "name": "Google Gemini (Pro & Flash)",
+                  "applicationCategory": "ArtificialIntelligence",
+                  "operatingSystem": "Cloud",
+                  "description": "Foundation Hybrid Model (01/02): Dual-tier neural backbone combining Gemini Pro deep proof synthesis with low-latency Gemini Flash Socratic routing behind Cloudflare Workers."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#qwen-math-sympy",
+                  "name": "Qwen-Math (+ Python/SymPy Sandbox)",
+                  "applicationCategory": "ArtificialIntelligence",
+                  "operatingSystem": "Sandboxed Execution Environment",
+                  "description": "Foundation Hybrid Model (02/02): Competition mathematics specialist model paired directly with an isolated Python / SymPy symbolic execution sandbox for deterministic math verification."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 5,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#plagioguard",
+                  "name": "PlagioGuard",
+                  "applicationCategory": "SecurityApplication",
+                  "operatingSystem": "Cloud",
+                  "description": "QPRT-4 Guardian (01/24): Scans Forge drafts and live proof submissions against AoPS and historical corpora, blocking over 75% similarity contamination."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 6,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#axiomcheck",
+                  "name": "AxiomCheck",
+                  "applicationCategory": "EducationalApplication",
+                  "operatingSystem": "Cloud",
+                  "description": "QPRT-4 Guardian (02/24): Verifies mathematical consistency, domain constraints, and boundary conditions before any problem or proof enters scoring."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 7,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#pulsewatcher",
+                  "name": "PulseWatcher",
+                  "applicationCategory": "SecurityApplication",
+                  "operatingSystem": "Web",
+                  "description": "QPRT-4 Guardian (03/24): Monitors real-time keystroke cadence, focus switches, and Module 7 telemetry streams during live rated rounds."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 8,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#nightwarden",
+                  "name": "NightWarden",
+                  "applicationCategory": "SecurityApplication",
+                  "operatingSystem": "Cloud",
+                  "description": "QPRT-4 Guardian (04/24): Runs continuous off-peak integrity sweeps, cross-round anomaly correlation, and silent overnight queue audits."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 9,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#gridshield",
+                  "name": "GridShield",
+                  "applicationCategory": "SecurityApplication",
+                  "operatingSystem": "Cloudflare Edge",
+                  "description": "QPRT-4 Guardian (05/24): Hardens Cloudflare Worker edge proxies against DDoS bursts, payload tampering, and malformed KaTeX/DOM injections."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 10,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#chronovault",
+                  "name": "ChronoVault",
+                  "applicationCategory": "SecurityApplication",
+                  "operatingSystem": "Cloud",
+                  "description": "QPRT-4 Guardian (06/24): Locks server-signed SHA-256 submission timestamps and triggers automated 2-min SymPy Global Rejudges on verified problem flaws (+25 to +100 pts)."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 11,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#appealtriage",
+                  "name": "AppealTriage",
+                  "applicationCategory": "SecurityApplication",
+                  "operatingSystem": "Cloud",
+                  "description": "QPRT-4 Guardian (07/24): Assembles evidence packets and routes contestant anti-cheat disputes through the 4-Step Forensic Appeal pipeline."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 12,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#honestyscore",
+                  "name": "HonestyScore",
+                  "applicationCategory": "SecurityApplication",
+                  "operatingSystem": "Cloud",
+                  "description": "QPRT-4 Guardian (08/24): Maintains each participant's longitudinal trust index across clean matches, Module 7 checks, and 11-Flag thresholds."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 13,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#collusionhunter",
+                  "name": "CollusionHunter",
+                  "applicationCategory": "SecurityApplication",
+                  "operatingSystem": "Cloud",
+                  "description": "QPRT-4 Guardian (09/24): Detects coordinated solution sharing, synchronized 1v1 Bullet Blitz win-trading, and multi-account boosting rings."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 14,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#resellershield",
+                  "name": "ResellerShield",
+                  "applicationCategory": "SecurityApplication",
+                  "operatingSystem": "Cloud",
+                  "description": "QPRT-4 Guardian (10/24): Enforces the 5-Layer Anti-Reselling Shield across Academy rosters by auditing seat transfers, device churn, and IP dispersion."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 15,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#banaudit",
+                  "name": "BanAudit",
+                  "applicationCategory": "SecurityApplication",
+                  "operatingSystem": "Cloud",
+                  "description": "QPRT-4 Guardian (11/24): Reviews permanent disqualifications, ELO rollbacks, and 4-Signal Alt Neutralization evidence before immutable ledger commits."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 16,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#guidecurator",
+                  "name": "GuideCurator",
+                  "applicationCategory": "EducationalApplication",
+                  "operatingSystem": "Web",
+                  "description": "QPRT-4 Guardian (12/24): Curates verified Community & Institutional Guidebooks and awards +2 Contribution ELO for accepted mathematical tips."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 17,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#suggestionminer",
+                  "name": "SuggestionMiner",
+                  "applicationCategory": "UtilitiesApplication",
+                  "operatingSystem": "Cloud",
+                  "description": "QPRT-4 Guardian (13/24): Clusters student feedback, feature proposals, and post-contest errata signals into prioritized Headquarters action queues."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 18,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#blogscout",
+                  "name": "BlogScout",
+                  "applicationCategory": "EducationalApplication",
+                  "operatingSystem": "Web",
+                  "description": "QPRT-4 Guardian (14/24): Evaluates community KaTeX articles on Arithmo Socials for originality and promotes standout posts via Blog-to-Lab (+5 ELO)."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 19,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#forummoderator",
+                  "name": "ForumModerator",
+                  "applicationCategory": "SecurityApplication",
+                  "operatingSystem": "Web",
+                  "description": "QPRT-4 Guardian (15/24): Protects signal-to-noise on 2000+ Expert Q&A threads and suppresses spam, spoilers during active windows, and abuse."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 20,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#proofgrader",
+                  "name": "ProofGrader",
+                  "applicationCategory": "EducationalApplication",
+                  "operatingSystem": "Cloud",
+                  "description": "QPRT-4 Guardian (16/24): Evaluates Drag-and-Drop LaTeX proofs on an Olympiad rubric and assists Find the Flaw audits (+5 to +50 pts opponent proof hacks; -10 pts false-claim penalty)."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 21,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#tagarchitect",
+                  "name": "TagArchitect",
+                  "applicationCategory": "EducationalApplication",
+                  "operatingSystem": "Cloud",
+                  "description": "QPRT-4 Guardian (17/24): Enforces the Zero-Fragmentation Olympiad Tag policy across the 5 Core Arenas and Schema v1.2 problem metadata."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 22,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#academykyb",
+                  "name": "AcademyKYB",
+                  "applicationCategory": "BusinessApplication",
+                  "operatingSystem": "Cloud",
+                  "description": "QPRT-4 Guardian (18/24): Verifies institutional Know-Your-Business credentials and manages Dual-Handle routing and Academy ELO (a single indivisible institutional rating computed from team contest results and average member match performance)."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 23,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#batchradar",
+                  "name": "BatchRadar",
+                  "applicationCategory": "EducationalApplication",
+                  "operatingSystem": "Cloud",
+                  "description": "QPRT-4 Guardian (19/24): Diagnoses cohort-wide conceptual gaps across 100 to 2,000+ Academy student rosters for mentor intervention."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 24,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#tokenmeter",
+                  "name": "TokenMeter",
+                  "applicationCategory": "FinanceApplication",
+                  "operatingSystem": "Cloud",
+                  "description": "QPRT-4 Guardian (20/24): Governs fair Semantic Token billing: 0 tokens for greetings, -1 for duplicate clarifications, -N for multi-queries, and -2x for Hybrid mode."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 25,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#walletledger",
+                  "name": "WalletLedger",
+                  "applicationCategory": "FinanceApplication",
+                  "operatingSystem": "Cloud",
+                  "description": "QPRT-4 Guardian (21/24): Reconciles Arithmo Wallet +10% top-up bonuses, Pay-As-You-Go packs, and Academy billing transactions atomically."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 26,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#shadowbot",
+                  "name": "ShadowBot",
+                  "applicationCategory": "SecurityApplication",
+                  "operatingSystem": "Sandboxed Execution Environment",
+                  "description": "QPRT-4 Guardian (22/24): Neutralizes suspected bot scripts and 11-Flag Blackhole accounts inside silent shadow-graded sandboxes without tipping off cheaters."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 27,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#hqstrategist",
+                  "name": "HQStrategist",
+                  "applicationCategory": "BusinessApplication",
+                  "operatingSystem": "Cloud",
+                  "description": "QPRT-4 Guardian (23/24): Assists Headquarters operations with 7-Day Contest Calendar balancing, reserve pool readiness, and escalation triage."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 28,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#complianceguard-ai",
+                  "name": "ComplianceGuard AI",
+                  "applicationCategory": "SecurityApplication",
+                  "operatingSystem": "Cloud",
+                  "description": "QPRT-4 Guardian (24/24): Enforces the 14-Point Legal Shield, COPPA/GDPR-K underage data minimization, and 24-hour Zero-PII Data Lake scrubbing."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 29,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#goldenvault-miner",
+                  "name": "GoldenVault Miner",
+                  "applicationCategory": "EducationalApplication",
+                  "operatingSystem": "Cloud",
+                  "description": "Question-Forge & Anti-LLM (01/12): Ingests the Co-Founders' private 5x4 Golden Vault via Read-Only GitHub PAT & Cloudflare Worker Proxy to serve Schema v1.2 sets."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 30,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#archivesynthesizer",
+                  "name": "ArchiveSynthesizer",
+                  "applicationCategory": "EducationalApplication",
+                  "operatingSystem": "Cloud",
+                  "description": "Question-Forge & Anti-LLM (02/12): Extracts structural problem motifs from public Olympiad archives to seed contamination-free original authoring templates."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 31,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#theoremfusion",
+                  "name": "TheoremFusion",
+                  "applicationCategory": "EducationalApplication",
+                  "operatingSystem": "Cloud",
+                  "description": "Question-Forge & Anti-LLM (03/12): Composes multi-domain Olympiad lemmas across Number Theory, Algebra, Geometry, and Combinatorics for Mixed rounds."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 32,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#adversarialredteam-ai",
+                  "name": "AdversarialRedTeam AI",
+                  "applicationCategory": "SecurityApplication",
+                  "operatingSystem": "Cloud",
+                  "description": "Question-Forge & Anti-LLM (04/12): Attacks draft Forge statements for edge cases (e.g., p=2, n=0, degenerate geometry) and tests resistance against frontier LLMs."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 33,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#intuitionforge-ai",
+                  "name": "IntuitionForge AI",
+                  "applicationCategory": "EducationalApplication",
+                  "operatingSystem": "Cloud",
+                  "description": "Question-Forge & Anti-LLM (05/12): Designs problems prioritizing genuine human mathematical insight over brute-force algebraic expansion or pattern memorization."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 34,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#logicmutator",
+                  "name": "LogicMutator",
+                  "applicationCategory": "EducationalApplication",
+                  "operatingSystem": "Cloud",
+                  "description": "Question-Forge & Anti-LLM (06/12): Produces clean parametric problem mutations and 30-second emergency reserve hot-swaps during live contest disruptions."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 35,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#trapweaver",
+                  "name": "TrapWeaver",
+                  "applicationCategory": "SecurityApplication",
+                  "operatingSystem": "Cloud",
+                  "description": "Question-Forge & Anti-LLM (07/12): Embeds anti-LLM structural traps and eliminates accidental computational shortcuts or bashable small-modulus leaks."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 36,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#sympyveritas",
+                  "name": "SymPyVeritas",
+                  "applicationCategory": "EducationalApplication",
+                  "operatingSystem": "Sandboxed Execution Environment",
+                  "description": "Question-Forge & Anti-LLM (08/12): Runs deterministic Python/SymPy proof and answer-key verification on Forge candidates and 2-minute global rejudges."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 37,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#difficultycalibrator",
+                  "name": "DifficultyCalibrator",
+                  "applicationCategory": "EducationalApplication",
+                  "operatingSystem": "Cloud",
+                  "description": "Question-Forge & Anti-LLM (09/12): Calibrates 5-problem difficulty curves and expected solve latencies against the 0-3000+ segmented ELO ladder."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 38,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#quantumshuffler",
+                  "name": "QuantumShuffler",
+                  "applicationCategory": "SecurityApplication",
+                  "operatingSystem": "Cloud",
+                  "description": "Question-Forge & Anti-LLM (10/12): Randomizes isomorphic variable bindings and symbolic presentation order per session to thwart copy-paste lookup."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 39,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#telemetryreshaper",
+                  "name": "TelemetryReshaper",
+                  "applicationCategory": "EducationalApplication",
+                  "operatingSystem": "Web",
+                  "description": "Question-Forge & Anti-LLM (11/12): Adapts problem phrasing and interactive GeoGebra/LaTeX scaffolding without altering mathematical equivalence."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 40,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#weaknesstargetedgen-ai",
+                  "name": "WeaknessTargetedGen AI",
+                  "applicationCategory": "EducationalApplication",
+                  "operatingSystem": "Cloud",
+                  "description": "Question-Forge & Anti-LLM (12/12): Synthesizes unrated practice sets targeting individual or cohort Arena tag weaknesses without contaminating rated pools."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 41,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#arithmo-alert-ai",
+                  "name": "Arithmo Alert AI",
+                  "applicationCategory": "SecurityApplication",
+                  "operatingSystem": "Web",
+                  "description": "Psychological Deterrence Agent (01/01): Issues AES-256 encrypted soft-pinch warnings—nudging focus and organic LaTeX habits without exposing internal anti-cheat logic."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 42,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://rayaantasnim.github.io/Arithmo-Edge/ai-core.html#headquarters-ai",
+                  "name": "Headquarters AI",
+                  "applicationCategory": "BusinessApplication",
+                  "operatingSystem": "Cloud",
+                  "description": "Supreme Command Overlord AI (01/01, Subsite #12): Root ecosystem command authority on Subsite #12, strictly exclusive to 750+ Chief Arbiters and 1000+ Prime Sovereigns."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body class="selection:bg-cyan-400/30 selection:text-cyan-100">
+    <div id="root" data-page="ai-core.html"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

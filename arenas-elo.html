@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5 Core Olympiad Arenas and 60 ELO Tiers | Arithmo-Edge</title>
+    <meta
+      name="description"
+      content="Simulate 10 Core Arena ELOs across Number Theory, Algebra, Geometry, Combinatorics, and Mixed Olympiad with 60 titles, composite ranks, and 1v1 Bullet Blitz."
+    />
+    <link
+      rel="canonical"
+      href="https://rayaantasnim.github.io/Arithmo-Edge/arenas-elo.html"
+    />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="author" content="Rayaan Tasnim, Jalees Habib" />
+    <meta name="theme-color" content="#0A0F1C" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Arithmo-Edge" />
+    <meta
+      property="og:title"
+      content="5 Core Olympiad Arenas and 60 ELO Tiers | Arithmo-Edge"
+    />
+    <meta
+      property="og:description"
+      content="Simulate 10 Core Arena ELOs across Number Theory, Algebra, Geometry, Combinatorics, and Mixed Olympiad with 60 titles and 1v1 Bullet Blitz."
+    />
+    <meta
+      property="og:url"
+      content="https://rayaantasnim.github.io/Arithmo-Edge/arenas-elo.html"
+    />
+    <meta
+      property="og:image"
+      content="https://images.pexels.com/photos/4145190/pexels-photo-4145190.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Interactive 5 Core Olympiad Arenas and 60 ELO ranking progression matrix"
+    />
+    <meta property="og:locale" content="en_US" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="5 Core Olympiad Arenas and 60 ELO Tiers | Arithmo-Edge"
+    />
+    <meta
+      name="twitter:description"
+      content="Simulate 10 Core Arena ELOs across Number Theory, Algebra, Geometry, Combinatorics, and Mixed Olympiad with 60 titles and 1v1 Bullet Blitz."
+    />
+    <meta
+      name="twitter:image"
+      content="https://images.pexels.com/photos/5905709/pexels-photo-5905709.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Interactive 5 Core Olympiad Arenas and 60 ELO ranking progression matrix"
+    />
+
+    <link rel="icon" type="image/jpeg" href="favicon.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://rayaantasnim.github.io/Arithmo-Edge/#organization",
+            "name": "Arithmo-Edge",
+            "alternateName": "Olympiad Edge",
+            "url": "https://rayaantasnim.github.io/Arithmo-Edge/",
+            "logo": "https://rayaantasnim.github.io/Arithmo-Edge/favicon.jpg",
+            "email": "rayaantasnim@gmail.com",
+            "areaServed": "Worldwide",
+            "founder": [
+              {
+                "@type": "Person",
+                "@id": "https://rayaantasnim.github.io/Arithmo-Edge/pioneers.html#rayaan-tasnim",
+                "name": "Rayaan Tasnim",
+                "jobTitle": "Founder & Chief System Architect",
+                "email": "rayaantasnim@gmail.com",
+                "sameAs": [
+                  "https://github.com",
+                  "https://github.com/Arithmo-Edge"
+                ]
+              },
+              {
+                "@type": "Person",
+                "@id": "https://rayaantasnim.github.io/Arithmo-Edge/pioneers.html#jalees-habib",
+                "name": "Jalees Habib",
+                "jobTitle": "Co-Founder & Chief Mathematical Engineer",
+                "sameAs": [
+                  "https://www.youtube.com/@jaleeshabib",
+                  "https://www.chess.com/member/jaiees"
+                ]
+              }
+            ],
+            "sameAs": [
+              "https://github.com",
+              "https://github.com/Arithmo-Edge",
+              "https://www.youtube.com/@jaleeshabib",
+              "https://www.chess.com/member/jaiees",
+              "https://rayaantasnim.github.io/Arithmo-Edge/pioneers.html"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://rayaantasnim.github.io/Arithmo-Edge/#website",
+            "url": "https://rayaantasnim.github.io/Arithmo-Edge/",
+            "name": "Arithmo-Edge",
+            "alternateName": "Olympiad Edge",
+            "description": "The World's First Real-Time ELO-Rated Competitive Mathematics & Olympiad Mega-Ecosystem, Powered by Olympiad Edge.",
+            "inLanguage": "en-US",
+            "publisher": {
+              "@id": "https://rayaantasnim.github.io/Arithmo-Edge/#organization"
+            },
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://rayaantasnim.github.io/Arithmo-Edge/?q={search_term_string}"
+              },
+              "query-input": "required name=search_term_string"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://rayaantasnim.github.io/Arithmo-Edge/arenas-elo.html#webpage",
+            "url": "https://rayaantasnim.github.io/Arithmo-Edge/arenas-elo.html",
+            "name": "5 Core Olympiad Arenas and 60 ELO Tiers | Arithmo-Edge",
+            "description": "Simulate 10 Core Arena ELOs across Number Theory, Algebra, Geometry, Combinatorics, and Mixed Olympiad with 60 titles, composite ranks, and 1v1 Bullet Blitz.",
+            "inLanguage": "en-US",
+            "isPartOf": {
+              "@id": "https://rayaantasnim.github.io/Arithmo-Edge/#website"
+            },
+            "about": {
+              "@id": "https://rayaantasnim.github.io/Arithmo-Edge/#organization"
+            },
+            "publisher": {
+              "@id": "https://rayaantasnim.github.io/Arithmo-Edge/#organization"
+            },
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "https://images.pexels.com/photos/37707942/pexels-photo-37707942.jpeg?auto=compress&cs=tinysrgb&w=1600",
+              "width": 1200,
+              "height": 630
+            },
+            "mainEntity": {
+              "@id": "https://rayaantasnim.github.io/Arithmo-Edge/arenas-elo.html#elo-system"
+            },
+            "breadcrumb": {
+              "@id": "https://rayaantasnim.github.io/Arithmo-Edge/arenas-elo.html#breadcrumb"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://rayaantasnim.github.io/Arithmo-Edge/arenas-elo.html#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://rayaantasnim.github.io/Arithmo-Edge/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "5 Core Arenas & 60 ELO Tiers",
+                "item": "https://rayaantasnim.github.io/Arithmo-Edge/arenas-elo.html"
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://rayaantasnim.github.io/Arithmo-Edge/arenas-elo.html#elo-system",
+            "name": "Arithmo-Edge 5 Core Arenas & 60-Title ELO Rating System",
+            "applicationCategory": "EducationalApplication",
+            "operatingSystem": "Web",
+            "url": "https://rayaantasnim.github.io/Arithmo-Edge/arenas-elo.html",
+            "provider": {
+              "@id": "https://rayaantasnim.github.io/Arithmo-Edge/#organization"
+            },
+            "description": "Competitive mathematics rating architecture enforcing the Strict No-Mixed ELO Policy across 5 specialized arenas with 10 isolated Core Arena ELOs (independent General ELO and Expert ELO per arena on a 0-3200 scale), plus 2 separate tracks (Contribution ELO and HQ ELO), canonical midpoint formula Arena Rank ELO = (General ELO + Expert ELO) / 2 across 60 rank titles (12 tiers per arena), Zero-Fragmentation Olympiad Tag Policy, Overall All-Rounder Composite Rating anchored on Mixed Mathematical Olympiad and Sunday Mega Arena outcomes for Top 128 Annual World Cup eligibility, and 1v1 Bullet Blitz matchmaking with anti-collusion caps and System Expectation Override underdog protection.",
+            "featureList": [
+              "Strict No-Mixed ELO Policy & 10 Core Arena ELOs: Each of the 5 arenas maintains an independent General ELO and Expert ELO updated separately on Subsite #7 leaderboards, preventing rating inflation across speed computation and proof rigor",
+              "2 Specialized Stewardship Tracks: Contribution ELO and HQ ELO track editorial and governance stewardship separately from the 10 competitive arena ELOs",
+              "Canonical Rank Formula: Arena Rank ELO = (General ELO + Expert ELO) / 2 evaluated identically across all 5 arenas on a 0-3200 scale (e.g., General 1500 + Expert 1700 = Average 1600 -> CONGRUENCE STRATEGIST in Number Theory, eligible for Arithmo Forge problemsetting after 6 clean matches)",
+              "Zero-Fragmentation Olympiad Tag Policy: Sub-topic tags (#Modular-Arithmetic, #Vieta-Jumping, #Inversion, #Pigeonhole) are stripped client- and edge-side by TagArchitect during live rated rounds and unlocked in unrated practice and Arithmo Database review so WeaknessTargetedGen AI can target lemma gaps",
+              "Overall All-Rounder Composite Rating: Aggregates cross-disciplinary mastery across all 5 Core Arenas while anchoring primarily on Subsite #5 (Mixed Mathematical Olympiad) and Sunday Mega Arena outcomes on the Core Portal and Subsite #7 All Rounders leaderboard for Top 128 Annual World Cup eligibility",
+              "1v1 Bullet Blitz & Underdog Protection: Random queues match within +-100 ELO; direct @handle challenges have a 30-minute acceptance fallback; 24h 2-Match Pairwise Cap prevents win-trading; System Expectation Override (+Delta R Underdog Protection) softens rating drops when outperforming expected margin against 2000+ Sentinels"
+            ],
+            "hasPart": [
+              {
+                "@type": "DefinedTermSet",
+                "@id": "https://rayaantasnim.github.io/Arithmo-Edge/arenas-elo.html#arena-1-number-theory",
+                "name": "1. Number Theory (#00F0FF)",
+                "url": "https://arithmo-edge.github.io/number-theory/",
+                "description": "Arena 1 of 5 in the 60-Title Rank Matrix with independent General ELO and Expert ELO (0-3200) and 12 canonical rank tiers.",
+                "hasDefinedTerm": [
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "FOUNDRY INITIATE",
+                    "description": "Number Theory ELO range: 0-499"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "COMPOSITE APPRENTICE",
+                    "description": "Number Theory ELO range: 500-899"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "SIEVE SCOUT",
+                    "description": "Number Theory ELO range: 900-1199"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "DIVISOR VANGUARD",
+                    "description": "Number Theory ELO range: 1200-1399"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "MODULAR OPERATOR",
+                    "description": "Number Theory ELO range: 1400-1599"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "CONGRUENCE STRATEGIST",
+                    "description": "Number Theory ELO range: 1600-1799"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "DIOPHANTINE VECTOR",
+                    "description": "Number Theory ELO range: 1800-1999"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "EULERIAN SENTINEL",
+                    "description": "Number Theory ELO range: 2000-2199"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "GAUSSIAN OVERLORD",
+                    "description": "Number Theory ELO range: 2200-2399"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "DIRICHLET ARCHON",
+                    "description": "Number Theory ELO range: 2400-2699"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "RIEMANN TRANSCENDENTALIST",
+                    "description": "Number Theory ELO range: 2700-2999"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "ARITHMETIC SINGULARITY",
+                    "description": "Number Theory ELO range: 3000+"
+                  }
+                ]
+              },
+              {
+                "@type": "DefinedTermSet",
+                "@id": "https://rayaantasnim.github.io/Arithmo-Edge/arenas-elo.html#arena-2-algebra",
+                "name": "2. Algebra (#8B5CF6)",
+                "url": "https://arithmo-edge.github.io/algebra/",
+                "description": "Arena 2 of 5 in the 60-Title Rank Matrix with independent General ELO and Expert ELO (0-3200) and 12 canonical rank tiers.",
+                "hasDefinedTerm": [
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "VARIABLE INITIATE",
+                    "description": "Algebra ELO range: 0-499"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "LINEAR APPRENTICE",
+                    "description": "Algebra ELO range: 500-899"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "QUADRATIC SCOUT",
+                    "description": "Algebra ELO range: 900-1199"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "POLYNOMIAL VANGUARD",
+                    "description": "Algebra ELO range: 1200-1399"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "INEQUALITY OPERATOR",
+                    "description": "Algebra ELO range: 1400-1599"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "RECURRENCE STRATEGIST",
+                    "description": "Algebra ELO range: 1600-1799"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "FUNCTIONAL VECTOR",
+                    "description": "Algebra ELO range: 1800-1999"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "CAUCHY-SCHWARZ SENTINEL",
+                    "description": "Algebra ELO range: 2000-2199"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "VIETA OVERLORD",
+                    "description": "Algebra ELO range: 2200-2399"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "GALOIS ARCHON",
+                    "description": "Algebra ELO range: 2400-2699"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "ABELIAN TRANSCENDENT",
+                    "description": "Algebra ELO range: 2700-2999"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "ALGEBRAIC SINGULARITY",
+                    "description": "Algebra ELO range: 3000+"
+                  }
+                ]
+              },
+              {
+                "@type": "DefinedTermSet",
+                "@id": "https://rayaantasnim.github.io/Arithmo-Edge/arenas-elo.html#arena-3-geometry",
+                "name": "3. Geometry (#F59E0B)",
+                "url": "https://arithmo-edge.github.io/geometry/",
+                "description": "Arena 3 of 5 in the 60-Title Rank Matrix with independent General ELO and Expert ELO (0-3200) and 12 canonical rank tiers.",
+                "hasDefinedTerm": [
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "EUCLIDEAN INITIATE",
+                    "description": "Geometry ELO range: 0-499"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "ANGLE APPRENTICE",
+                    "description": "Geometry ELO range: 500-899"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "CHORD SCOUT",
+                    "description": "Geometry ELO range: 900-1199"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "CEVIAN VANGUARD",
+                    "description": "Geometry ELO range: 1200-1399"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "CYCLIC OPERATOR",
+                    "description": "Geometry ELO range: 1400-1599"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "RADICAL AXIS STRATEGIST",
+                    "description": "Geometry ELO range: 1600-1799"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "HOMOTHETY VECTOR",
+                    "description": "Geometry ELO range: 1800-1999"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "INVERSION SENTINEL",
+                    "description": "Geometry ELO range: 2000-2199"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "BARYCENTRIC OVERLORD",
+                    "description": "Geometry ELO range: 2200-2399"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "PROJECTIVE ARCHON",
+                    "description": "Geometry ELO range: 2400-2699"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "RIEMANNIAN TRANSCENDENT",
+                    "description": "Geometry ELO range: 2700-2999"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "GEOMETRIC SINGULARITY",
+                    "description": "Geometry ELO range: 3000+"
+                  }
+                ]
+              },
+              {
+                "@type": "DefinedTermSet",
+                "@id": "https://rayaantasnim.github.io/Arithmo-Edge/arenas-elo.html#arena-4-combinatorics",
+                "name": "4. Combinatorics & Permutation (#10B981)",
+                "url": "https://arithmo-edge.github.io/combinatorics/",
+                "description": "Arena 4 of 5 in the 60-Title Rank Matrix with independent General ELO and Expert ELO (0-3200) and 12 canonical rank tiers.",
+                "hasDefinedTerm": [
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "COUNTING INITIATE",
+                    "description": "Combinatorics & Permutation ELO range: 0-499"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "FACTORIAL APPRENTICE",
+                    "description": "Combinatorics & Permutation ELO range: 500-899"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "BINOMIAL SCOUT",
+                    "description": "Combinatorics & Permutation ELO range: 900-1199"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "PIGEONHOLE VANGUARD",
+                    "description": "Combinatorics & Permutation ELO range: 1200-1399"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "INVARIANT OPERATOR",
+                    "description": "Combinatorics & Permutation ELO range: 1400-1599"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "EXTREMAL STRATEGIST",
+                    "description": "Combinatorics & Permutation ELO range: 1600-1799"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "GRAPH VECTOR",
+                    "description": "Combinatorics & Permutation ELO range: 1800-1999"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "GENERATING SENTINEL",
+                    "description": "Combinatorics & Permutation ELO range: 2000-2199"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "RAMSEY OVERLORD",
+                    "description": "Combinatorics & Permutation ELO range: 2200-2399"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "ERGODIC ARCHON",
+                    "description": "Combinatorics & Permutation ELO range: 2400-2699"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "TURÁN TRANSCENDENT",
+                    "description": "Combinatorics & Permutation ELO range: 2700-2999"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "COMBINATORIAL SINGULARITY",
+                    "description": "Combinatorics & Permutation ELO range: 3000+"
+                  }
+                ]
+              },
+              {
+                "@type": "DefinedTermSet",
+                "@id": "https://rayaantasnim.github.io/Arithmo-Edge/arenas-elo.html#arena-5-mixed-olympiad",
+                "name": "5. Mixed Mathematical Olympiad (#F43F5E) — Primary Anchor for Overall All-Rounder Rating",
+                "url": "https://arithmo-edge.github.io/mixed-olympiad/",
+                "description": "Arena 5 of 5 in the 60-Title Rank Matrix with independent General ELO and Expert ELO (0-3200) and 12 canonical rank tiers; serves as the primary anchor for Overall All-Rounder Rating.",
+                "hasDefinedTerm": [
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "OLYMPIAD INITIATE",
+                    "description": "Mixed Mathematical Olympiad ELO range: 0-499"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "AXIOM APPRENTICE",
+                    "description": "Mixed Mathematical Olympiad ELO range: 500-899"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "DEDUCTION SCOUT",
+                    "description": "Mixed Mathematical Olympiad ELO range: 900-1199"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "THEOREM VANGUARD",
+                    "description": "Mixed Mathematical Olympiad ELO range: 1200-1399"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "SYNTHESIS OPERATOR",
+                    "description": "Mixed Mathematical Olympiad ELO range: 1400-1599"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "HYBRID STRATEGIST",
+                    "description": "Mixed Mathematical Olympiad ELO range: 1600-1799"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "HEURISTIC VECTOR",
+                    "description": "Mixed Mathematical Olympiad ELO range: 1800-1999"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "PARADOX SENTINEL",
+                    "description": "Mixed Mathematical Olympiad ELO range: 2000-2199"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "POLYMATHEMATICAL OVERLORD",
+                    "description": "Mixed Mathematical Olympiad ELO range: 2200-2399"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "ARCHIMEDEAN ARCHON",
+                    "description": "Mixed Mathematical Olympiad ELO range: 2400-2699"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "HILBERTIAN TRANSCENDENT",
+                    "description": "Mixed Mathematical Olympiad ELO range: 2700-2999"
+                  },
+                  {
+                    "@type": "DefinedTerm",
+                    "name": "OMNI-OLYMPIAD SINGULARITY",
+                    "description": "Mixed Mathematical Olympiad ELO range: 3000+"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body class="selection:bg-cyan-400/30 selection:text-cyan-100">
+    <div id="root" data-page="arenas-elo.html"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
